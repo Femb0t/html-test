@@ -1,0 +1,247 @@
+<!DOCTYPE html> <!--Says document is html type-->
+<html lang="en-US"> <!--sets html lang-->
+    <head>
+        <!--title, style, base, script,
+            link (external), meta (tags) belong in the head-->
+        <title>HTML Test Program</title> <!--Webpage title-->
+        <!--global class-->
+        <style>
+            .border {
+                border: 1px solid red;
+            }
+            #id {
+                padding:40px;
+                text-align:center;
+            }
+        </style>
+        <style>
+            .class {
+                border:2px solid purple;
+                text-align: center;
+                color:slategray;
+            }
+        </style>
+        <style>
+            #idname {
+                border-bottom: 3px dashed black;
+            }
+        </style>
+        <!--external css much better for multiple files--> 
+        <link href="style.css" rel="stylesheet"/>
+
+        <!--example metatags-->
+        <meta charset="UTF-8"/>
+        <meta name="keywords" content="rick, morty"/>
+        <meta name="description" content="site decription"/>
+        <meta name="language" content="EN"/>
+        <meta name="author" content="your name"/>
+
+        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+
+        <!--favicons are icons for the tab in a browser (ico > png)-->
+        <link rel="icon" href="./chungus.ico" type="image/x-icon" />
+    </head>
+
+    <body>
+        <!--to show < > use &lt; &gt;-->
+
+        <!--transfer data to servers .php GET can be seen POST cannot-->
+        <!--<form method="POST" action="test.html">-->
+            <!--text, checkbox, button, color, date, email, file-->
+            <!--
+            Enter Name:
+            <input type="text" placeholder="First Name" size="20" autofocus="autofocus"/> 
+            <br />
+            Enter Email:
+            <input type="email" placeholder="email@email.com" size="50"/>
+            <br />
+
+            <textarea cols="100" rows="4" placeholder="Space sensitive"></textarea>
+            <br />
+
+            <input type="text" name="name"/>
+            <input type="text" name="name"/>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            <br />
+
+        </form> -->
+
+        <form method="POST" action="post.php">
+            BOSG + 
+            <select name="Loadout">
+                <option value="1">Red Dot</option>
+                <option value="2">Holographic</option>
+                <option value="3">Acog</option>
+            </select>
+            <select name="Op">
+                <option value="V">Vigil</option>
+                <option value="D">Dokkaebi</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+
+        <video class="mw-100 p-2"  controls="controls">
+            <source src="Im in.mp4" type="video/mp4"/> <!--h.264-->
+            Update your browser
+        </video>
+        <br />
+
+        <audio controls="controls">
+            <source src="enemyspotted.mp3" type="audio/mp3" />
+            Update your browser
+        </audio>
+
+        <div class="border" id="id">
+            Styled text
+        </div>
+        <p class="border">
+            paragraph sytled
+        </p>
+        <!--class="class border"
+        can have more than 1 parent class-->
+        <div class="class">
+            class class
+        </div>
+        <div id="idname">
+            This is an ID
+        </div>
+
+        <blockquote>
+            blockquote indents
+        </blockquote>
+
+        <q>
+            q quote add "" around paragraph and is space sensitive
+        </q> <br />
+
+        <q cite="https://www.wikipedia.com/">
+            cited text
+        </q>
+
+        <code>
+            monospaced font code
+        </code> <br />
+
+        <samp>
+            samp is another monospaced font
+        </samp> <br />
+
+        <kbd>
+            another font kbd
+        </kbd> <br />
+
+        <var>
+            another font var
+        </var> <br />
+
+        <!--strong > b (bold), em (emphasis) > i (italics)-->
+
+
+
+
+        <table border="1" width="100%" cellspacing="4" cellpadding="3">
+            <thead>
+                <tr>
+                    <th>
+                        Column 1 Title
+                    </th>
+                    <th>
+                        Column 2 Title
+                    </th>
+                    <th>
+                        Column 3 Title
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr> <!--row 1-->
+                    <td>
+                        First Cell
+                    </td>
+                    <td>
+                        Second Cell
+                    </td>
+                    <td>
+                        Third Cell
+                    </td>
+                </tr>
+                <tr> <!--row 2-->
+                    <td rowspan="2">
+                        First Cell
+                    </td>
+                    <td colspan="2">
+                        Second Cell
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        First Cell
+                    </td>
+                    <td>
+                        Second Cell
+                    </td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+            </tfoot>
+        </table>
+
+        <!--Ordered lists (numbered)-->
+        <ol>
+            <li>first</li>
+            <li>second</li>
+            <li>Nested
+                <ul> <!--unordered lists-->
+                    <li>nested unordered 1</li>
+                    <li>nested unordered 2</li>
+                </ul>
+            </li>
+            <li>Last</li>
+        </ol>
+
+        <span style="border: 1px solid red;">
+            test
+        </span>
+
+        <h1> <!--use h1 for the title for search optimization-->
+            Rick and Morty
+        </h1>
+        <h4 title="I'm In">
+            You son of a bitch
+        </h4>
+
+        <div style='border:4px solid purple;'>
+            Block Element takes up full page
+        </div>
+
+        <span style='border:5px solid red;'>
+            Span Element only takes up needed space
+        </span>
+        <p>--</p>
+
+        <div style='border:3px solid green; padding:30px; width:20%;'>
+            20% screen width green border 3px (rest is held but empty space)
+        </div>
+
+        <!--internal link to jump to the end of a page-->
+        Click <a href="#link1">this link to view linked paragraph</a> <br />
+
+        <!--target _blank (new tab) _self (default/current page) _parent (dependent on other attributes)-->
+        <a href="http://www.youtube.com" target="_blank">Youtube</a> <br />
+
+        <!--image with hyperlink-->
+        <a href="https://www.youtube.com/watch?v=-4Y0EGrh0TY">
+            <img class="mw-100 p-2" title="I'm In" alt="No Img" src="im in.png" /><br />
+        </a>
+        
+        <!--internal link reference-->
+        <a name="link1">Linked paragraph</a>
+
+        
+    </body>
+</html>
